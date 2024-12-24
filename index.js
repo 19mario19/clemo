@@ -14,4 +14,8 @@ form.addEventListener("submit", (e) => {
 
     console.log(response)
 
+    name.value = ""
+    email.value = ""
+    message.value = ""
+
 })

@@ -1,0 +1,105 @@
+.form {
+    /* background-color: var(--dark-gray); */
+
+    .main-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        padding: 5rem;
+
+        h1 {
+            text-align: center;
+            color: black;
+            margin: 2rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                p {
+                    color: black;
+                }
+
+                p.map:before {
+                    content: "\f041";
+                    margin-right: .5rem;
+                }
+
+                p.number:before {
+                    content: "\f10b";
+                    margin-right: .5rem;
+                }
+
+                p.email:before {
+                    content: "\f003";
+                    margin-right: .5rem;
+                }
+            }
+
+            .data-form form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                button {
+                    align-self: center;
+                    background-color: black;
+                    color: white;
+                }
+
+                input {
+                    /* background-color: var(--dark-gray); */
+                    /* color: white; */
+                    padding: .5rem;
+                    padding-bottom: 2rem;
+
+                    border: none;
+                    border-bottom: 1px solid #333;
+
+                    font-size: var(--fs-p);
+
+                    &:active,
+                    &:focus {
+                        border: none;
+                        border-bottom: 1px solid white;
+                        /* outline: 1px solid var(--primary-color); */
+                        /* color: black; */
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .form {
+        .main-container {
+            padding: 1.25rem;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+
+
+            }
+        }
+    }
+}
+
+#map {
+    margin: 0 auto;
+    height: 700px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="./global.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&loading=async&libraries=maps&v=beta" defer>
+    </script>
+    <script src="./contact.js" type="module" defer></script>
+    <script src="./scripts/app.js" type="module" defer></script>
+
+</head>
+
+<body>
+
+    <div class="form">
+        <div class="main-container">
+            <h1>get in touch</h1>
+            <div class="content">
+                <div class="info">
+                    <p class="map">23 Mulholland Drive, Suite 721. Los Angeles 10010 100 S. Main Street. Los Angeles
+                        90012</p>
+                    <p class="number">+1-670-567-5590</p>
+                    <p class="email">hello@clemocreative.com</p>
+                    <div class="socials">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="data-form">
+                    <form id="index-form" method="post">
+                        <input type="text" name="name" id="name" placeholder="name">
+                        <input type="email" name="email" id="email" placeholder="email">
+                        <input type="text" name="message" id="message" placeholder="your message">
+                        <button class="submit">submit</button>
+                    </form>
+                </div>
+            </div>
+            <gmp-map id="map" center="37.4220656,-122.0840897" zoom="10" map-id="DEMO_MAP_ID" ></gmp-map>
+        </div>
+    </div>
+</body>
+
+</html>

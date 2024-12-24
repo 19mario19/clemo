@@ -1,0 +1,458 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-large);
+    background-color: var(--primary-color);
+    padding: 8rem var(--gap-large);
+
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--gap-med);
+
+    }
+
+    button {
+        background-color: black;
+        color: white;
+
+        &:hover {
+            border-color: transparent;
+            background-color: var(--primary-darker-color);
+            color: black;
+        }
+    }
+}
+
+
+.what {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-gray);
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+    }
+
+    h1 {
+        text-align: center;
+        padding: var(--pad-large);
+
+    }
+
+    .call-to-action {
+        display: flex;
+        gap: 5rem;
+        padding: var(--gap-large) 0;
+
+
+        img {
+            width: 450px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-large);
+            justify-content: space-between;
+
+        }
+
+        button {
+            &:hover {
+                border-color: transparent;
+                border-color: black;
+            }
+        }
+    }
+
+}
+
+.left {
+    flex-direction: row-reverse;
+}
+
+.best-work {
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--gap-large);
+
+    align-items: center;
+    padding: 5rem 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: var(--gap-large);
+
+
+        .component {
+            position: relative;
+
+            /* border: 2px solid red; */
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                border-radius: 5px;
+            }
+
+            &:hover .text {
+                opacity: 1;
+            }
+
+            h2 {
+                font-size: var(--fs-box);
+            }
+
+            .text {
+                position: absolute;
+                inset: 10%;
+
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                transition: all .25s ease-in;
+                align-items: center;
+                justify-content: center;
+                /* padding: var(--pad-large); */
+
+
+                padding: 5rem;
+                /* transform: translateX(-50%) translateY(-50%); */
+                background-color: var(--primary-color);
+
+                opacity: 0;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+
+        }
+
+        .item0 {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .item1 {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+
+        }
+
+        .item2 {
+            grid-column: 3;
+            grid-row: 1;
+
+        }
+
+        .item3 {
+            grid-column: 1;
+            grid-row: 2 / span 2;
+
+
+        }
+
+        .item4 {
+            grid-column: 2;
+            grid-row: 3;
+
+
+        }
+
+        .item5 {
+            grid-column: 3;
+            grid-row: 2/ span 2;
+
+        }
+
+    }
+}
+
+.best-team {
+    background-color: var(--primary-color);
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 5rem 0;
+
+
+        h1 {
+            margin: 2rem;
+        }
+
+        .members {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5rem;
+
+
+            padding: var(--pad-large);
+
+            .member {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: baseline;
+                gap: 1rem;
+
+                img {
+                    max-width: 150px;
+                }
+
+                h2 {
+                    text-align: center;
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    gap: 1rem;
+
+                }
+            }
+        }
+    }
+}
+
+.clients {}
+
+.form {
+    background-color: var(--dark-gray);
+
+    .main-container {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        padding: 5rem;
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin: 2rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+
+
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                p {
+                    color: white;
+                }
+
+                p.map:before {
+                    content: "\f041";
+                    margin-right: .5rem;
+                }
+
+                p.number:before {
+                    content: "\f10b";
+                    margin-right: .5rem;
+                }
+
+                p.email:before {
+                    content: "\f003";
+                    margin-right: .5rem;
+                }
+            }
+
+            .data-form form {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                button {
+                    align-self: center;
+                }
+
+                input {
+                    background-color: var(--dark-gray);
+                    color: white;
+                    padding: 2rem;
+                    padding-left: 1rem;
+                    border: none;
+                    border-bottom: 1px solid #333;
+
+                    font-size: var(--fs-p);
+
+                    &:active,
+                    &:focus {
+                        border: none;
+                        border-bottom: 1px solid white;
+                        outline: none;
+                        background-color: rgba(174, 122, 70, 0.039);
+                        /* color: black; */
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.clients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        margin: 8rem;
+
+        h1 {
+            margin: 2rem;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+
+            .author {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: end;
+                gap: 1rem;
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+
+    .main-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        margin: 0;
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+
+
+    .what {
+        .main-container {
+            gap: .5rem;
+
+            .call-to-action {
+                flex-direction: column;
+                gap: .5rem;
+
+                img {
+                    width: 100%;
+                    padding: .25rem;
+                }
+
+                .content {
+                    padding: 1.25rem;
+
+                    button {
+                        align-self: center;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .best-team {
+        .main-container {
+
+            .members {
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
+    }
+
+    .clients {
+        .main-container {
+            margin: 0;
+            padding: 2rem 1.25rem;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+
+                .author {
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .form {
+        .main-container {
+            padding: 1.25rem;
+
+            .content {
+                display: flex;
+                flex-direction: column;
+
+
+            }
+        }
+    }
+
+    .best-work {
+        .grid {
+            display: flex;
+            flex-direction: column;
+
+
+            .component {
+                width: 100%;
+
+            }
+        }
+    }
+}
